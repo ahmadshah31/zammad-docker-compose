@@ -25,10 +25,10 @@ jobs:
       run: npm test
 
     - name: Build Docker image
-      run: docker build -t mahmadshah11@gmail.com/challange:latest .
+      run: docker build -t ahmadshah31/challange:latest .
 
     - name: Push Docker image to Docker Hub
       run: |
         echo ${{ secrets.DOCKER_PASSWORD }} | docker login -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
-        docker push mahmadshah11@gmail.com/challange:latest
+        docker push ahmadshah31/challange:latest
 
